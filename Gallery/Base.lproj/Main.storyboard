@@ -25,37 +25,45 @@
                                     <action selector="browseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1f-K4-Yzs"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-Gs-Grc">
-                                <frame key="frameInset" minX="16" minY="92" width="2000" height="272"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-Gs-Grc">
+                                <frame key="frameInset" minX="4" minY="86" width="375" height="272"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QQB-tm-dTz">
                                         <rect key="frame" x="8" y="14" width="342" height="250"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="2000" id="4KS-pK-9ao"/>
-                                    <constraint firstAttribute="trailing" secondItem="QQB-tm-dTz" secondAttribute="trailing" id="AiZ-rj-uED"/>
                                     <constraint firstItem="QQB-tm-dTz" firstAttribute="leading" secondItem="Sdp-Gs-Grc" secondAttribute="leading" id="Ke8-g2-IHx"/>
                                     <constraint firstAttribute="height" constant="272" id="SrS-TM-3DX"/>
                                     <constraint firstAttribute="bottom" secondItem="QQB-tm-dTz" secondAttribute="bottom" id="am9-Ac-4zt"/>
                                     <constraint firstItem="QQB-tm-dTz" firstAttribute="top" secondItem="Sdp-Gs-Grc" secondAttribute="top" id="cuB-80-pHo"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-Lh-Odx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BEP-j6-0Qg" firstAttribute="top" secondItem="Sdp-Gs-Grc" secondAttribute="bottom" constant="253" id="Ezo-Wc-4LR"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="BEP-j6-0Qg" secondAttribute="bottom" constant="20" id="Jti-sz-dd2"/>
+                            <constraint firstAttribute="trailing" secondItem="Sdp-Gs-Grc" secondAttribute="trailing" constant="15" id="24Q-e4-pb8"/>
+                            <constraint firstItem="zRQ-Lh-Odx" firstAttribute="trailing" secondItem="BEP-j6-0Qg" secondAttribute="trailing" id="8UV-yR-9V3"/>
+                            <constraint firstItem="zRQ-Lh-Odx" firstAttribute="top" secondItem="BEP-j6-0Qg" secondAttribute="bottom" constant="24" id="8eZ-Ep-qqh"/>
+                            <constraint firstItem="BEP-j6-0Qg" firstAttribute="top" secondItem="Sdp-Gs-Grc" secondAttribute="bottom" constant="220" id="Ezo-Wc-4LR"/>
                             <constraint firstItem="Sdp-Gs-Grc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="O87-sM-CRf"/>
                             <constraint firstAttribute="trailing" secondItem="BEP-j6-0Qg" secondAttribute="trailing" constant="23" id="OoL-UN-Wuk"/>
                             <constraint firstItem="BEP-j6-0Qg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="V0g-zd-5YI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zRQ-Lh-Odx" secondAttribute="bottom" constant="8" id="XWp-bu-aVf"/>
                             <constraint firstItem="Sdp-Gs-Grc" firstAttribute="leading" secondItem="BEP-j6-0Qg" secondAttribute="leading" id="c5K-mG-zpM"/>
+                            <constraint firstItem="zRQ-Lh-Odx" firstAttribute="leading" secondItem="BEP-j6-0Qg" secondAttribute="leading" id="kWa-69-KtA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K6X-5F-Eul"/>
                     <connections>
                         <outlet property="imageStackView" destination="QQB-tm-dTz" id="Ncn-zJ-guE"/>
                         <outlet property="scrollView" destination="Sdp-Gs-Grc" id="rZy-7x-N4e"/>
+                        <outlet property="visiblePage" destination="zRQ-Lh-Odx" id="vOf-o2-Jaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
